@@ -10,7 +10,12 @@ public class createArithmeticSeq{
         int diff = Integer.parseInt(diff1);
 
         for (int ardzs = 1; ardzs <= 16; ardzs++){
-            System.out.print(first + diff);
+            StringBuilder ardzsgwapo = new StringBuilder(first + " ");
+
+            first += diff;
+
+            JOptionPane.showMessageDialog(null, ardzsgwapo.toString());
+
 
         }
     }
