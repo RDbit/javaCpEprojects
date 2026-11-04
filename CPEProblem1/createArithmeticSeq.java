@@ -9,6 +9,9 @@ public class createArithmeticSeq{
         String diff1 = JOptionPane.showInputDialog("put the diff: ");
         int diff = Integer.parseInt(diff1);
 
-        
+        for (int ardzs = 1; ardzs <= 16; ardzs++){
+            System.out.print(first + diff);
+
+        }
     }
 }
