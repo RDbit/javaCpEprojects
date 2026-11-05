@@ -1,23 +1,25 @@
 package CPEProblem2;
 import javax.swing.JOptionPane;
-import java.util.Scanner;
+import java.util.Arrays;
 
 public class limanuminput{
     public static void main(String[] args){
-        String limaint = JOptionPane.showInputDialog("Enter 5 number: ");
-        int limaint2 = Integer.parseInt(limaint);
+        int[] limaint = new int[5];
 
-        Arrays.sort(limaint2);
-
-        for(int num = 1; num <= 5; num++){
-
-
-
+        for (int i = 0; i < 5; i++) {
+            String input = JOptionPane.showInputDialog(null, "Enter number " + (i + 1) + ":", "input", JOptionPane.QUESTION_MESSAGE);
+            limaint[i] = Integer.parseInt(input); 
         }
+        Arrays.sort(limaint);
 
-        
-        
+        // Optional: Display the sorted array
+        StringBuilder result = new StringBuilder("Sorted numbers: ");
+        for (int num : limaint) {
+            result.append(num).append(" ");
+        }
+        JOptionPane.showMessageDialog(null, result.toString());
     }
-
-
 }
+    
+
+
