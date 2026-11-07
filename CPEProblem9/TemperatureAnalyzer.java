@@ -1,4 +1,7 @@
+
 package CPEProblem9;
+
+import javax.swing.JOptionPane;
 
 public class TemperatureAnalyzer {
 
@@ -16,40 +19,47 @@ public class TemperatureAnalyzer {
         int pleasantDays = 0;
         int coldDays = 0;
 
-        System.out.println("DAILY TEMPERATURE REPORT");
-        System.out.println("========================");
+        // Store the daily classifications
+        String result = "DAILY TEMPERATURE REPORT\n";
+        result += "============================\n";
 
-        // Determine the category of each temperature
+        // Process each temperature
         for (int i = 0; i < temperatures.length; i++) {
 
             int temperature = temperatures[i];
 
-            System.out.print("Day " + (i + 1) + ": "
-                    + temperature + " - ");
+            result += "Day " + (i + 1) + ": "
+                    + temperature + " - ";
 
             if (temperature >= 85) {
-                System.out.println("Hot");
+                result += "Hot\n";
                 hotDays++;
 
             } else if (temperature >= 60) {
-                System.out.println("Pleasant");
+                result += "Pleasant\n";
                 pleasantDays++;
 
             } else {
-                System.out.println("Cold");
+                result += "Cold\n";
                 coldDays++;
             }
         }
 
-        // Display temperature summary
-        System.out.println("\nTEMPERATURE SUMMARY");
-        System.out.println("========================");
+        // Add the summary
+        result += "\nTEMPERATURE SUMMARY\n";
+        result += "============================\n";
+        result += "Hot days: " + hotDays + "\n";
+        result += "Pleasant days: " + pleasantDays + "\n";
+        result += "Cold days: " + coldDays + "\n";
+        result += "----------------------------\n";
+        result += "Total days: " + temperatures.length;
 
-        System.out.println("Hot days: " + hotDays);
-        System.out.println("Pleasant days: " + pleasantDays);
-        System.out.println("Cold days: " + coldDays);
-
-        System.out.println("------------------------");
-        System.out.println("Total days: " + temperatures.length);
+        // Display results using JOptionPane
+        JOptionPane.showMessageDialog(
+            null,
+            result,
+            "Temperature Analyzer",
+            JOptionPane.INFORMATION_MESSAGE
+        );
     }
 }
