@@ -6,7 +6,7 @@ public class limanuminput{
     public static void main(String[] args){
         int[] limaint = new int[5];
 
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 10; i++) {
             String input = JOptionPane.showInputDialog(null, "Enter number " + (i + 1) + ":", "input", JOptionPane.QUESTION_MESSAGE);
             limaint[i] = Integer.parseInt(input); 
         }
