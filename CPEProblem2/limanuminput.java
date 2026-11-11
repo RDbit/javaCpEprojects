@@ -12,7 +12,6 @@ public class limanuminput{
         }
         Arrays.sort(limaint);
 
-        // Optional: Display the sorted array
         StringBuilder result = new StringBuilder("Sorted numbers: ");
         for (int num : limaint) {
             result.append(num).append(" ");
