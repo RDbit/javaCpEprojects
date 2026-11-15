@@ -13,3 +13,22 @@ public class PalindromeChecker {
         }
         
         // Method 1: Convert to string and compare
+        String numStr = String.valueOf(number);
+        boolean isPalindrome = true;
+        
+        for (int i = 0; i < numStr.length() / 2; i++) {
+            if (numStr.charAt(i) != numStr.charAt(numStr.length() - 1 - i)) {
+                isPalindrome = false;
+                break;
+            }
+        }
+        
+        if (isPalindrome) {
+            JOptionPane.showMessageDialog(null, number + " is a palindrome");
+        } else {
+            JOptionPane.showMessageDialog(null, number + " is not a palindrome");
+        }
+    }
+}
+
+//ajnsfdjsnfjednfj
