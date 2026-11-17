@@ -12,7 +12,6 @@ public class PalindromeChecker {
             return;
         }
         
-        // Method 1: Convert to string and compare
         String numStr = String.valueOf(number);
         boolean isPalindrome = true;
         
@@ -31,4 +30,4 @@ public class PalindromeChecker {
     }
 }
 
-//ajnsfdjsnfjednfj
+
