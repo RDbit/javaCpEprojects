@@ -7,23 +7,19 @@ public class TemperatureAnalyzer {
 
     public static void main(String[] args) {
 
-        // Store daily high temperatures
         int[] temperatures = {
             55, 62, 68, 74, 59, 45, 41, 58, 60,
             67, 65, 78, 82, 88, 91, 92, 90, 93,
             87, 78, 79, 72, 68, 61, 59
         };
 
-        // Initialize counters
         int hotDays = 0;
         int pleasantDays = 0;
         int coldDays = 0;
 
-        // Store the daily classifications
         String result = "DAILY TEMPERATURE REPORT\n";
         result += "============================\n";
 
-        // Process each temperature
         for (int i = 0; i < temperatures.length; i++) {
 
             int temperature = temperatures[i];
@@ -45,7 +41,6 @@ public class TemperatureAnalyzer {
             }
         }
 
-        // Add the summary
         result += "\nTEMPERATURE SUMMARY\n";
         result += "============================\n";
         result += "Hot days: " + hotDays + "\n";
@@ -54,7 +49,6 @@ public class TemperatureAnalyzer {
         result += "----------------------------\n";
         result += "Total days: " + temperatures.length;
 
-        // Display results using JOptionPane
         JOptionPane.showMessageDialog(
             null,
             result,
