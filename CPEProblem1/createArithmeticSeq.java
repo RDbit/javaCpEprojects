@@ -11,11 +11,9 @@ public class createArithmeticSeq{
 
         StringBuilder ardzsgwapo = new StringBuilder("Sequence: ");
 
-        for (int ardzs = 1; ardzs <= 16
-            ; ardzs++){
+        for (int ardzs = 1; ardzs <= 16; ardzs++){
             ardzsgwapo.append(first).append(" ");
             first += diff;
-
         }
         JOptionPane.showMessageDialog(null, ardzsgwapo.toString());
     }

@@ -6,9 +6,8 @@ import java.util.Arrays;
 public class limanuminput {
     public static void main(String[] args) {
 
-        int[] girlint = new int[5];
+        int[] jayint = new int[5];
 
-        // Input 5 numbers
         for (int i = 0; i < 5; i++) {
             String input = JOptionPane.showInputDialog(
                 null,
@@ -17,31 +16,24 @@ public class limanuminput {
                 JOptionPane.QUESTION_MESSAGE
             );
 
-            girlint[i] = Integer.parseInt(input);
+            jayint[i] = Integer.parseInt(input);
         }
 
-        // Sort numbers in ascending order
-        Arrays.sort(girlint);
+        Arrays.sort(jayint);
 
-        // Get highest and lowest numbers
-        int lowest = girlint[0];
-        int highest = girlint[4];
+        int lowest = jayint[0];
+        int highest = jayint[4];
 
-        // Display ascending order
         StringBuilder ascending = new StringBuilder();
-        for (int num : girlint) {
+        for (int num : jayint) {
             ascending.append(num).append(" ");
         }
-
-        // Display descending order
         StringBuilder descending = new StringBuilder();
-        for (int i = girlint.length - 1; i >= 0; i--) {
-            descending.append(girlint[i]).append(" ");
+        for (int i = jayint.length - 1; i >= 0; i--) {
+            descending.append(jayint[i]).append(" ");
         }
-
-        // Display results
         String result =
-            "Entered Numbers: " + Arrays.toString(girlint) +
+            "Entered Numbers: " + Arrays.toString(jayint) +
             "\n\nHighest Number: " + highest +
             "\nLowest Number: " + lowest +
             "\n\nAscending Order: " + ascending +
