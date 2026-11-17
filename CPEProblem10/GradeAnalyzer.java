@@ -7,7 +7,6 @@ public class GradeAnalyzer {
 
     public static void main(String[] args) {
 
-        // Initialize grade counters
         int totalGrades = 0;
         int gradeA = 0;
         int gradeB = 0;
@@ -15,7 +14,6 @@ public class GradeAnalyzer {
         int gradeD = 0;
         int gradeF = 0;
 
-        // Read the first exam score
         String input = JOptionPane.showInputDialog(
             "Enter exam score (0-100):\nEnter a negative number to stop."
         );
@@ -26,10 +24,8 @@ public class GradeAnalyzer {
 
         int score = Integer.parseInt(input);
 
-        // Process scores until a negative number is entered
         while (score >= 0) {
 
-            // Validate the score
             if (score > 100) {
 
                 JOptionPane.showMessageDialog(
@@ -41,7 +37,6 @@ public class GradeAnalyzer {
 
                 totalGrades++;
 
-                // Determine letter grade
                 if (score >= 90) {
                     gradeA++;
 
@@ -59,7 +54,6 @@ public class GradeAnalyzer {
                 }
             }
 
-            // Read the next score
             input = JOptionPane.showInputDialog(
                 "Enter another exam score (0-100):\nEnter a negative number to stop."
             );
@@ -71,7 +65,6 @@ public class GradeAnalyzer {
             score = Integer.parseInt(input);
         }
 
-        // Display the final results
         String result = "EXAM GRADE SUMMARY\n";
         result += "========================\n";
         result += "Total number of grades = " + totalGrades + "\n\n";
