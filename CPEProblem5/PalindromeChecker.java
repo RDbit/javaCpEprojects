@@ -6,7 +6,7 @@ public class PalindromeChecker {
         String input = JOptionPane.showInputDialog("Enter a number:");
         int number = Integer.parseInt(input);
         
-        // Handle negative numbers
+        
         if (number < 0) {
             JOptionPane.showMessageDialog(null, "Negative numbers are not palindromes");
             return;
